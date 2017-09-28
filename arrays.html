@@ -1,0 +1,109 @@
+<script type="text/javascript">
+
+var students = [];
+students = ["Jennifer", "Nikolas", "Zach"];
+students.push("Taylor");
+students.push("Hayes");
+
+// --Every array has a length property
+// --this is the same as doing len(students)
+console.log(students.length)
+
+// like python and everything else the first index is 0.
+// and any data tye can go in any index
+// 1.String
+// 2. Array 
+// 3. Object
+// 4. Number
+// 5. Boolean
+
+// separated by a comma
+var nfcSouth = [
+	"Falcons",
+	"Saints",
+	"Bucs",
+	"Panthers"
+]
+
+// --to access an index within an array, use [n]
+// console.log(nfcSouth[0]); //falcons
+// // console.log(nfcSouth[6]); //undefined. Python would say index out of bounds but javascript tells you indefined
+
+// // nfcSouth.push("Cownboys");
+// // nfcSouth.pop() //removes the last element in an array
+// // console.log(nfcSouth.pop()) //will return the element that was removed from the array
+
+var atlTeams = [
+	"Thrasher",
+	"Falcons",
+	"Hawks",
+	"Braves"
+]
+
+// console.log(atlTeams);
+
+// // atlTeams.shift() //will remove and return the first elemnt in the array
+// // console.log(atlTeams.shift())
+
+// // --slice is like this(2:5) (like list in python)...gets a copy, does not change the original
+// // --you tell it x and y, where to start and where to finish
+
+// console.log(atlTeams.slice(1,2));
+// console.log(atlTeams)
+
+// atlTeams2 = atlTeams;
+// console.log(atlTeams2)
+
+// --Splice will allow you to add and remove elemnts from any index
+// splice args:
+// 1.Where to start
+// 2.how many to delete
+// 3.what to insert (you can have multiple)
+
+
+// atlTeams.splice(0, 1, "Atl United") //start at 0, removes 1(thrashers), add atl united
+// console.log(atlTeams)
+
+// --if not deleting, still must include 0,
+// atlTeams.splice(0, 0, "Atl United")
+// --if not adding, the third is not neccessary
+// atlTeams.splice(0, 1)
+
+// --while loop(works the same as python)...
+// --make sure to use var with your true variable
+// --ex:
+// var keep_going = true
+// while(keep_going){
+// 	if(num == num){
+// 		var keep_going = false
+// 	}
+// }
+
+// --for loops almost same as python loops(syntax a little different)
+// --1st arg: iterator
+// --2nd arg: condition to keep running
+// --3rd arg: step at the end of the loop
+// for (var i = 0; i<100; i++){
+// 	console.log(i)
+// }
+
+// --sometimes you put "let" instead of var
+// --let will make a variable that lasts from { to }
+// --A string is a fancy array
+// --an array is a fancy object
+
+// var name = "Casey"
+// for(let i = 0; i < name.length; i++){
+// 	console.log(name[i])
+// }
+
+// --a def in python, is a fuction in javascript
+// --instead of : we will use {}
+
+function sayHello(name, last = "Zimmerman"){
+	console.log(name)
+	console.log(last)
+}
+sayHello("Casey");
+
+</script>

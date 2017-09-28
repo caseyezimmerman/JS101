@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fight the Dragon</title>
+
+	<style type="text/css">
+		body{
+			text-align: center;
+		}	
+
+		#health{
+			font-weight: bolder;
+			font-size: 25px;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+	var health = 5;
+	// var keep_going = true
+
+	function rollDice(){
+		console.log("user pressed the roll button")
+		// get a random number between 1 and 6 for both dice.
+		var rand1 = Math.ceil(Math.random() * 6);
+		var rand2 = Math.ceil(Math.random() * 6);
+
+			// The dice images are dN.gif. We have 2 randoms numbers for that N.
+			// Use javascript to update the DOM, so thtat the image files that show will be the same number as the
+			// random numbers above
+		var dice = document.getElementById('dice')
+		console.log(dice);
+		var image1 = dice.children[0];
+		var image2 = dice.children[1];
+		image1.src = `dragon-assets/d${rand1}.gif`;
+		image2.src = `dragon-assets/d${rand2}.gif`;
+//
+		// while(keep_going){
+
+		if(rand1 + rand2 > 7){
+			document.getElementById('health').innerHTML = health ++
+			// document.getElementById('dragon').children[0].src ="http://tech.hulu.com/assets/2012/11/dead_dragon.png"
+		}
+		if(rand1 + rand2 <= 7){
+			document.getElementById('health').innerHTML = health --
+			// document.getElementById('message').innerHTML = "You have defeated the dragon!";
+		}
+		if (health > 10){
+			document.getElementById('message').innerHTML = "You have defeated the dragon!";
+			document.getElementById('dragon').children[0].src ="http://tech.hulu.com/assets/2012/11/dead_dragon.png"
+			// keep_going=false
+		}
+		if (health < 0){
+			document.getElementById('message').innerHTML = "You have been killed by the dragon!";
+			document.getElementById('dragon').children[0].src="https://d30y9cdsu7xlg0.cloudfront.net/png/41260-200.png"
+			// keep_going=false
+		}
+	}
+// }
+
+
+	</script>
+
+</head>
+<body>
+
+	<div id="game-wrapper">
+		<div id="health">
+			Your health is:<br>
+			10
+		</div>
+		<div id="dragon">
+			<img src="./dragon-assets/dragon.png">
+		</div>
+		<div id="message">
+			You have encountered the green dragon. Roll to fight. You must roll an 8 or higher to defeat it.
+		</div>
+		<div id="dice">
+			<img src="./dragon-assets/d1.gif">
+			<img src="./dragon-assets/d1.gif">
+		</div>
+		<div class="roll">
+			<button onclick="rollDice();">Fight!</button>       <!-- JS code rollDice -->
+		</div>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+<script type="text/javascript">
+
+// daysOfWeek = [
+// 	"Monday",
+// 	"Tuesday",
+// 	"Wedneday",
+// 	"Thursday",
+// 	"Friday",
+// 	"Saturday",
+// 	"Sunday"
+// ]
+
+
+// var day = prompt("Using 0-6 (0 being Monday), what day of the week is it?");
+// if(isNaN(day)){
+// 	alert("you must enter a number");
+// }
+// else if (day == [0]){
+// 	alert("Its Monday go to work!")
+// }
+// else if (day == [1]){
+// 	alert("Go to work!")
+// }
+// else if (day == [2]){
+// 	alert("Go to work!")
+// }
+// else if (day == [3]){
+// 	alert("Go to work!")
+// }
+// else if (day == [4]){
+// 	alert("Go to work!")
+// }
+// else if (day == [5]){
+// 	alert("Sleep in!")
+// }
+// else if (day == [6]){
+// 	alert("Sleep in!")
+	
+// }
+
+
+function is_leap_year(year){
+	return(year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0)
+}
+
+function days_in_month(month, year){
+if (month in ['4', '6', '9', '11']){
+	alert('30')
+}else if (month in ['1', '3', '5', '7', '8', '10', "12"]){
+	alert('31')
+}else if(month == '2' and is_leap_year(year) == true){
+	alert('29')
+}else if (month == '2' and is_leap_year(year) == false){
+	alert('28')
+} 
+}
+
+is_leap_year(2016)
+days_in_month(3, 2016)
+
+
+
+
+</script>

@@ -1,0 +1,156 @@
+
+<script type="text/javascript">
+	
+// Print stuff...
+// semi colons are optional(BUT USE THEM)
+// alert("Hello, world");
+// creates an alert on the page
+// EVERYTHING inside the browser... repeat EVERYTHING belongs to the window object
+
+
+// can also use the console to print. will use this all the time
+// puts text in the console but not on the page
+// console.log("Hello, World");
+
+// actually write to window itself. The document object is where all the html is actually
+// puts it on the screen like html
+// document.write("Hello, World");
+
+// VARIABLES
+// Same as every other language... a variable is a place to store some thing(num, string, array, object)
+// Data-types -
+// 1. Strings
+// 2. Numbers - JS has only the Number data type, doesn't split into float/int
+// 2a. float
+// 2b. int
+// 3. Booleans
+// 4. Arrays
+// 5. Objects (Dictionary/Object) not the same objects as python
+// 
+// JS variables are created dynamically(like python)but they need to start with var whe first created/used
+// var means i am declaring a varable in the current scope
+	// -current scope might be the 1.window(global) or inside of a 2.function or inside of a 3.method
+// You only use var one time. Once a var is declared then you don't have to declare it again
+
+// In python use snake_case.
+// In JS use camelCase.
+
+// var fullName = "Casey Zimmerman";
+// console.log(fullName);
+// var fullName = "Casey Zimmerman";
+// console.log(fullName);
+// var firstName = "Casey"
+// var middleName = "Elaine"
+// var lastName = "Zimmerman"
+// // Concatenate strings with +
+// var fullName = firstName + " " + middleName + " " + lastName
+// console.log(fullName)
+
+// // template literals(ES6)
+// fullName = `${firstName} "${middleName}" ${lastName}`
+// console.log(fullName)
+
+// var theYear = 2017
+// var pi = 3.14
+
+// console.log(typeof(theYear))
+// console.log(typeof(pi))
+
+// var theYearAsAString = "2017"
+// console.log(typeof(theYearAsAString))
+
+// // Math like python
+// var twoYearsAgo = theYear -2;
+// var twoYearsFromNow = theYear + 2;
+// // console.log(theYearAsAString + 2;) JS will write this as a string(20172). strings always win
+// console.log(.2 + .1)
+
+// // BOOLEANS
+// // just like in python, 1 or 0, off or on, true or false
+// // True = true
+// var theTruth = true
+// console.log(typeof(theTruth))
+// var theLie = false
+
+// // MATH
+// // +, -, *, /, %
+
+// var amIEven = 11 % 2;
+// console.log(amIEven);
+
+// // INCRAMENTING
+// var i = 1;
+// i++; 
+// // the same as i+=1 in python, This is post fixing
+// i--; 
+// // the same as i-=1 in python
+// // to incrament bigget numbers you use the same as python. ex i+=10
+// console.log(i);
+// console.log(i++);
+// console.log(i);
+// console.log(++i);
+
+// // ORDER OF OPERATION is the same as python
+// // * and / alwasy come before + and -
+// // alwys left to right
+// // () overrides anything
+
+// // PROMPT METHOD 
+// // belongs to the window(just alert)
+// // Take 2 arguments, the first is the message to dislay. The second(optional) is the default response
+
+// var getUserName = prompt("What is your name?", "Casey")
+
+// // CONDITIONALS
+// var classSize = 19;
+// var userResponse = prompt("how big is your class?");
+// // = is an assignment 
+// // == is a comparison operator from the thing o the right to the thing on the left
+// // === compares if the thing on the right is the same as on the left and also if the data types are the same
+// if(userResponse == classSize){
+// 	alert("you are in the september class!")
+// }
+
+// import Math is not neccesasry
+// var round = Math.round(10.7);
+// console.log(round);
+// var up = Math.ceil(10.000001); //11
+// console.log(up);
+// var down = Math.floor(10.999999); //10
+// //parseInt...the same thing as Math.floor() or Number()
+// console.log(down);
+
+// var rand = Math.random(); //returns a random number between 0 and 1 thats 16 digits long
+// console.log(rand);
+// var betweenOneAndTen = Math.floor(rand * 10); //makes the random number between 1 and 10
+// console.log(betweenOneAndTen);
+
+
+// var num = prompt("Pick a number 1 through 10");
+var rand = Math.random();
+var randNum = Math.round(rand * 10);
+var keep_going = true
+// var difference = Math.abs(num - randNum)
+
+while(keep_going){
+var num = prompt("Pick a number 1 through 10");
+}if (num == randNum) {
+		alert("Correct!")
+		var keep_going = false
+}else if(num != randNum){
+		alert("Sorry, incorrect")
+}if (num > randNum){
+		alert("You guessed too high")
+}else if (num < randNum){
+		alert("You guessed too low")
+// }else if(difference <=2){
+// 	alert(`You were close, the number was ${randNum}`)
+// }
+}
+
+
+
+
+
+</script>
+
