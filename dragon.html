@@ -50,7 +50,7 @@
 			document.getElementById('dragon').children[0].src ="http://tech.hulu.com/assets/2012/11/dead_dragon.png"
 			// keep_going=false
 		}
-		if (health < 0){
+		if (health == 0){
 			document.getElementById('message').innerHTML = "You have been killed by the dragon!";
 			document.getElementById('dragon').children[0].src="https://d30y9cdsu7xlg0.cloudfront.net/png/41260-200.png"
 			// keep_going=false
@@ -67,13 +67,13 @@
 	<div id="game-wrapper">
 		<div id="health">
 			Your health is:<br>
-			10
+			5
 		</div>
 		<div id="dragon">
 			<img src="./dragon-assets/dragon.png">
 		</div>
 		<div id="message">
-			You have encountered the green dragon. Roll to fight. You must roll an 8 or higher to defeat it.
+			You have encountered the green dragon. Roll to fight. You must roll a 6 or higher to defeat it.
 		</div>
 		<div id="dice">
 			<img src="./dragon-assets/d1.gif">
